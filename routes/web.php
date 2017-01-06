@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//路由引导到视图方式
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+//路由引导到控制器的方法
+Route::get('/', 'StaticPagesController@home');
+Route::get('/help', 'StaticPagesController@help');
+Route::get('/about', 'StaticPagesController@about');
