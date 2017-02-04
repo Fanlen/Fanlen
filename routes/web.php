@@ -16,7 +16,9 @@
 //     return view('welcome');
 // });
 
-//路由引导到控制器的方法
-Route::get('/', 'StaticPagesController@home');
-Route::get('/help', 'StaticPagesController@help');
-Route::get('/about', 'StaticPagesController@about');
+//路由引导到控制器的方法,并指定控制器名称
+Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/help', 'StaticPagesController@help')->name('help');
+Route::get('/about', 'StaticPagesController@about')->name('about');
+
+Route::get('/singup','UsersController@create')->name('singup');
