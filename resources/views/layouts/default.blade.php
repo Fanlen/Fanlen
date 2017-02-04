@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <!--指定占位符，第一个参数为变量名，第二个为空时候，默认显示的值-->
-    <title>@yield('title','Fanlen') - Laravel 入门教程</title>
-  </head>
-  <body>
-   @yield('content')
-  </body>
+<head>
+  <title>@yield('title', 'Fanlen') - Laravel 入门教程</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+@include('layouts._header')
+
+<div class="container">
+  <div class="col-md-offset-1 col-md-10">
+    @yield('content')
+    @include('layouts._footer')
+  </div>
+</div>
+</body>
 </html>
