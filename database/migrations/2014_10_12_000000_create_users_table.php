@@ -14,6 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
+            //由increments方法创建了一个integer类型的自增长id
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
