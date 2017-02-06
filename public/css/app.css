@@ -7790,4 +7790,11 @@ footer .slogon {
   font-weight: bold;
 }
 
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  max-width: 50px;
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=app.css.map */
